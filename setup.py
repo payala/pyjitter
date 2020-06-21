@@ -127,7 +127,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
-    packages=find_packages(where='src'),  # Required
+    packages=find_packages(where='pyjitter'),  # Required
 
     # Specify which Python versions you support. In contrast to the
     # 'Programming Language' classifiers above, 'pip install' will check this
@@ -151,10 +151,10 @@ setup(
     #
     # Similar to `install_requires` above, these must be valid existing
     # projects.
-    # extras_require={  # Optional
+    extras_require={  # Optional
     #     'dev': ['check-manifest'],
-    #     'test': ['coverage'],
-    # },
+        'test': ['coverage', 'pytest'],
+    },
 
     # If there are data files included in your packages that need to be
     # installed, specify them here.
