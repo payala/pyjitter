@@ -31,7 +31,7 @@ def test_independent_signal_edges():
 
 
 def test_dependent_signal():
-    sig = Signal()
+    sig = Signal('I depend')
 
     edges = [
         Edge(10e-9, Signal.Level.HIGH, 1e-9, 2e-9),

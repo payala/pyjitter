@@ -2,7 +2,7 @@ from pyjitter.signal import Signal
 
 
 def create_basic_signal() -> Signal:
-    sig = Signal()
+    sig = Signal('basic')
 
     sig.add_edge(10e-9, Signal.Level.HIGH, 2e-9)
     sig.add_edge(20e-9, Signal.Level.LOW, 3e-9)

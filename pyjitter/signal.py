@@ -14,7 +14,8 @@ Edge = namedtuple('Edge',
 
 
 class Signal:
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
         # A signal can have it's own _edges (it's independent)
         self._edges: List[Edge] = []
 

@@ -9,7 +9,7 @@ from utils import create_basic_signal
 
 def test_calculate_edges():
     sig_in = create_basic_signal()
-    sig_out = Signal()
+    sig_out = Signal('out')
 
     con = Connection(sig_in, sig_out, 22e-9, 5e-9)
 
@@ -33,10 +33,10 @@ def test_find_connections():
     # Remove any existing references to other Connections
     gc.collect()
 
-    sig_a = Signal()
-    sig_b = Signal()
-    sig_c = Signal()
-    sig_d = Signal()
+    sig_a = Signal('a')
+    sig_b = Signal('b')
+    sig_c = Signal('c')
+    sig_d = Signal('d')
 
     con_ab = Connection(sig_a, sig_b, 10e-9, 1e-9)
     con_bc = Connection(sig_b, sig_c, 20e-9, 2e-9)
